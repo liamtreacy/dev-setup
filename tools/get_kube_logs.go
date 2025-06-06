@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"os/exec"
 )
 
 func GetKubeNS() ([]string, error) {
@@ -24,6 +25,16 @@ func GetKubeNS() ([]string, error) {
 	return lines, nil
 }
 
+func RunGetPods(ns []string)(){
+	for _, namespace := range ns {
+		output, err := exec.Command("ls " + namespace).Output()
+		if err != nil{
+			fmt.Println("Error, ", err)
+		}
+		fmt.Println(output)
+	}
+}
+
 func main() {
 	// Load in file with names of kubenamespaces of interest
 	// That file will not be saved to git
@@ -35,6 +46,8 @@ func main() {
 	dir, err := os.Getwd()
 	kube_namespaces, err := GetKubeNS()
 	fmt.Println(kube_namespaces)
+
+	RunGetPods(kube_namespaces)
 
 	if err == nil {
 		fmt.Println("hello! you are calling from: ", dir)
