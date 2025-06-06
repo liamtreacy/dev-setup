@@ -25,13 +25,13 @@ func GetKubeNS() ([]string, error) {
 	return lines, nil
 }
 
-func RunGetPods(ns []string)(){
+func RunGetPods(ns []string) {
 	for _, namespace := range ns {
-		output, err := exec.Command("ls " + namespace).Output()
-		if err != nil{
+		output, err := exec.Command("kubectl", "get", "pods", "-n", namespace).Output()
+		if err != nil {
 			fmt.Println("Error, ", err)
 		}
-		fmt.Println(output)
+		fmt.Println(string(output))
 	}
 }
 
