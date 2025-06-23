@@ -9,12 +9,12 @@ Prefix + n - next window
 Prefix + p - previous window
 CTRL + h,j,k,l - move between split panes
 Prefix + c - new window
-
+Prefix + & - kill window
 
 ## INTELLIJ
 
 OPT+SHIFT+left/right arrow - highlight a word
-
+CMD+SHIFT+left/right arrow - highlight to start/end of current line
 
 ## VIM
 
