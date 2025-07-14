@@ -29,7 +29,7 @@ CMD+SHIFT+left/right arrow - highlight to start/end of current line.
 
 ## VIM
 
-$ - go to end of line (normal mode)
-dd - cut current line
-b - begining of word
-e - end of word
+$ - go to end of line (normal mode)  
+dd - cut current line  
+b - begining of word  
+e - end of word  
