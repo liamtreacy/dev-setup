@@ -3,6 +3,34 @@
 If you are doing some piping and output, it's a good idea to add a newline at the end or the prompt might get included e.g.
 `echo MY_ENCODED_STRING | base64 --decode; echo`
 
+`rg` - ripgrep, useful tool for searching
+
+`eza` - new ls. Aliased to be `ll`
+
+`fd` - find (https://github.com/sharkdp/fd?tab=readme-ov-file#installation) e.g. `fd .go`. It ignores files listed in gitignore by default.
+
+`du -ah . | sort -rh | head -n 10` - list file sizes
+
+`source ~/.zshrc` - reload zsh
+
+`less` - show contents one page at a time
+
+`<cmd> | code -` - redirect live output to code 
+
+`open .` - open a Finder window in current location. 
+
+`env` - show all env vars
+
+`lsof -i :8080` - whats listening on a port
+
+`kill -9 <PID>` - kill process
+
+```
+// Copy and paste
+echo "Hello, world!" | pbcopy
+pbpaste
+```
+
 ## TMUX
 
 tmux ls - see active tmux sessions
@@ -35,6 +63,14 @@ Other option is to press v, select text and then y to yank and p to paste.
 OPT+SHIFT+left/right arrow - highlight a word.  
 CMD+SHIFT+left/right arrow - highlight to start/end of current line.  
 
+CMD+HOME - go to start of file.  
+CMD+END - go to end of file. 
+
+OPTION_CMD+F - rename variable or reformat code  
+
+CMD+L - go to line
+
+
 ## VIM
 
 $ - go to end of line (normal mode)
@@ -42,7 +78,49 @@ dd - cut current line
 G - go to end of file
 b - begining of word  
 e - end of word  
+0 - go to start of line
 
 ### NVCHAD
 
 Space - leader key
+
+
+## GIT
+
+
+To change submodule to point at branch
+
+    Go into the submodule folder e.g. api-specs
+    ```
+    git checkout <branch>
+    cd ..
+    git diff
+    ```
+
+    The commit it's pointing to should have changed. Commit this.
+
+To merge main into branch
+
+    ```
+    git checkout master
+    git pull
+    git checkout feature-branch
+    git merge master
+    ```
+
+## Windows
+
+Output everything to file - `cmd.exe > out.txt 2>&1`
+
+Process Explorer (Windows) - Can be used to see what arguments the running programs were invoked with.
+
+
+## Mac
+
+CMD+M - Minimise window
+
+Option + Shift + Command + V - Onenote paste without formatting
+
+CMD+SHIFT+. - Show hidden files in finder
+
+CTRL+Down - shows all windows of the current app
