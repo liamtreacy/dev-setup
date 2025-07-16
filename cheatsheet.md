@@ -84,6 +84,26 @@ e - end of word
 
 Space - leader key
 
+## Containters
+
+`docker system prune -a --volumes` - Remove all stopped containers etc. This is to be used when other options did not work
+
+`docker rmi -f $(docker images -aq)` - Remove all docker images
+
+`docker ps` - List all running containers
+
+`docker stop container_name` - Stop a running container
+
+`docker kill container_name` - Forcefully stop
+
+`docker container ls` - List running docker containers
+
+`kubectl get pods -n <namespace>` - get pods from namespace
+
+`kubectl logs <pod_name> -n <namespace > ccr_log.log` - get pod logs
+
+`kubectl exec -it <pod_name> -n <namespace> -- touch /tmp/run_get_payment_details` - create a file on a pod
+
 
 ## GIT
 
