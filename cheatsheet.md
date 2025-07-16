@@ -40,12 +40,9 @@ CMD+SHIFT+left/right arrow - highlight to start/end of current line.
 $ - go to end of line (normal mode)
 dd - cut current line
 G - go to end of file
+b - begining of word  
+e - end of word  
 
 ### NVCHAD
 
 Space - leader key
-=======
-$ - go to end of line (normal mode)  
-dd - cut current line  
-b - begining of word  
-e - end of word  
