@@ -1,2 +1,3 @@
-# dev-setup
-Repository to hold configs, tools and cheatsheets
+# cheatsheet  
+
+Repository to hold cheatsheets and maybe some handy tools
