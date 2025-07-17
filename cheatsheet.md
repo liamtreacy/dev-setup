@@ -56,7 +56,11 @@ While in copy mode, naviagte using arrows.
 Space - start selection, press enter and is copied to tmux buffer.  
 Prefix + ] - paste buffer
 
+When in copy mode, you can use VIM key bindings (e.g. b,e) to select to start of word etc.
+
 Other option is to press v, select text and then y to yank and p to paste.
+
+
 
 ## INTELLIJ
 
