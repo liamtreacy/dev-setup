@@ -2,7 +2,7 @@
 
 NAMESPACE="<some_namespace>"
 POD_PREFIX="<some_pod_prefix>"
-DATE_TAG="<some_date>"
+DATE_TAG=$(date +"%d_%m")
 LOG_PREFIX="log"
 
 # Get list of matching pods
